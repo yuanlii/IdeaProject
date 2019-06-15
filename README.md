@@ -179,5 +179,9 @@ you can start the Scala interpreter inside sbt using the `console` task.
 
 In order to quit the interpreter and get back to sbt, type <Ctrl+D>.
 
+--- 
+## TODO:
+1. learn more about sbt by building TODO app from scratch
+2. finish the basic part in coursera in terms of running Scala using SBT
 
 
