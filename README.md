@@ -34,6 +34,8 @@ scala worksheet - "internal error: null"
 Much akin to worksheets, Scala classes are created via context menu action Create New.
 (action: right click to run the app)
 
+![build scala class](https://github.com/yuanlii/IdeaProject/blob/master/img/create_new_scala_class(object).png)
+
 * warning appears in Example.scala -> benighted; just ignore
 
 7. Opening an SBT project
@@ -51,6 +53,8 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 ```
 this is to add scalatest, which is a test framework for scala #enabled it
 get the latest version of scalatest from [website](http://www.scalatest.org/install)
+
+![import framework](https://github.com/yuanlii/IdeaProject/blob/master/img/import_framework.png)
 
 * problem fixing:
 if frameworks not imported correctly, tried stop the module and import it again.
