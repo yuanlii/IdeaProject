@@ -50,6 +50,8 @@ add this line to the .sbt(build.sbt) file:
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 ```
 this is to add scalatest, which is a test framework for scala #enabled it
+get the latest version of scalatest from [website](http://www.scalatest.org/install)
+
 * problem fixing:
 if frameworks not imported correctly, tried stop the module and import it again.
 process: close project --> import project --> open build.sbt
