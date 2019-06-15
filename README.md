@@ -63,8 +63,121 @@ process: close project --> import project --> open build.sbt
 [ref](https://stackoverflow.com/questions/24937328/intellij-idea-cannot-import-sbt-project)
 
 
+----
+IDE for Scala:
+* Intellij IDEA
+* Eclipse
 
+.sbt file:
+The build definition goes in a file called build.sbt, located in the project’s base directory. 
 
+sbt reference:
+https://www.scala-sbt.org/0.13/docs/Hello.html
+-> comprehensive guide for building definition in sbt
+
+sbt(Simple Build Tool) is a general purpose build tool written in Scala. 
+- It borrows good ideas from other successful build tools like Ant, Maven, and Gradle.
+
+## Install sbt on your machine
+$ brew install sbt
+
+$ sbt about #view the basic information about sbt
+
+sbt terminology consists of two terms -- tasks and settings. 
+- tasks: whenever you want to perform any action you execute a task
+#view all the tasks applicable to a project:
+```
+$ sbt tasks  
+```
+- settings
+
+---
+## Create an sbt Scala project
+
+[reference](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md)
+build a simple task management app -- tasky for TODO management
+```
+$ mkdir tasky
+$ cd tasky
+```
+inside tasky directory, create a new file -- build.sbt to house the build script
+```
+name := "tasky"
+version := "0.1.0"
+```
+Now, run the sbt command:
+```
+$ sbt
+> help  
+# view all the tasks available
+# This is the sbt shell
+```
+* By default, sbt follows Maven project layout;
+* SBT commands are executed inside the SBT shell. 
+```
+scala> println("Oh, hai!")                                          
+# This is the Scala REPL, type some Scala code
+Oh, hai!
+```
+
+### sbt says Hello
+create a new Scala file HelloSbt.scala inside src/main/scala and place the following contents in it:
+```Scala
+object HelloSbt extends App {
+  println("Sbt says Hello!!")
+}
+
+```
+
+Now you can run the code from inside the sbt shell by first compiling the code using compile
+
+* Compiling your Code
+```
+> compile
+```
+The compile task will compile the source code of the assignment which is located in the directory src/main/scala.
+
+* Testing your Code
+contains unit tests for the project. In order to run these tests in sbt, you can use the test command.
+```
+> test
+```
+* Running your Code
+and then running it using the run task
+```
+> run
+```
+
+### Set Scala version
+Update the build.sbt with the scalaVersion setting.
+```
+name := "tasky"
+version := "0.1.0"
+scalaVersion := "2.11.6"
+```
+sbt will not pick any change in the build.sbt until you run the reload task.
+```
+> reload
+```
+
+Now if you compile the project using compile task you will see that project is compiled using scala 2.11.6 version:
+```
+> compile
+```
+
+sbt uses Apache Ivy dependency manager to perform automatic dependency management:
+```
+libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.6" % "test"
+```
+
+* appendix:
+- [Apache Maven](https://maven.apache.org/) - Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+
+### Running the Scala Interpreter inside SBT (REPL)
+
+you can start the Scala interpreter inside sbt using the `console` task. 
+
+In order to quit the interpreter and get back to sbt, type <Ctrl+D>.
 
 
 
