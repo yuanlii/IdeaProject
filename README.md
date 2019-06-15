@@ -1,5 +1,6 @@
 # IdeaProject
 This is learning documents for Scala.
+[Course link](https://www.coursera.org/learn/progfun1/lecture/UzicG/tools-setup-for-mac-os-x)
 
 
 ## Set up IntelliJ IDEA
